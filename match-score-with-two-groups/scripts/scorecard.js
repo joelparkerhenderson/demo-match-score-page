@@ -25,7 +25,7 @@ class Scorecard {
     calcTagToScore(tag) {
         var m = elementById(GatherComponent.idByPartnerField(this.maker, tag)).value
         var t = elementById(GatherComponent.idByPartnerField(this.taker, tag)).value
-        var score = Scorer.byString(m, t);
+        var score = ScoreCalculator.byString(m, t);
         this.tagToScore[tag.id] = score;
         return score;
     }

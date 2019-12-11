@@ -15,7 +15,7 @@ class ScoreCalculator {
     }
 
     static byString(a, b) {
-        return ScoreConverter.byInt(this.parseInt(a), ScoreConverter.parseInt(b));
+        return ScoreCalculator.byInt(ScoreConverter.parseInt(a), ScoreConverter.parseInt(b));
     }
 
     static byInputCheckbox(a, b) {
