@@ -2,14 +2,14 @@
 
 <head>
     <title>Scoreboard</title>
-    <link rel="stylesheet" type="text/css" href="styles/screen.css"/>
+    <link rel="stylesheet" type="text/css" href="../match_score_helpers/styles/screen.css"/>
     <link rel="stylesheet" type="text/css" href="https:////cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"/>
     <meta charset="UTF-8">
 </head>
 
 <body>
 
-<h1>Match Score</h1>
+<h1>Match Score: with two groups</h1>
 <!--
 <button onclick="elementById('makers').toggle(); return false;">Group 1</button>
 <button onclick="elementById('takers').toggle(); return false;">Group 2</button>
@@ -22,14 +22,14 @@
     <p><div id="scoreboard" class="page__area" style="display:block;"></div></p>
 </form>
 
+<script type="text/javascript" src="../match_score_helpers/scripts/util.js"></script>
+<script type="text/javascript" src="../match_score_helpers/scripts/gather.js"></script>
+<script type="text/javascript" src="../match_score_helpers/scripts/score_converter.js"></script>
+<script type="text/javascript" src="../match_score_helpers/scripts/score_calculator.js"></script>
+<script type="text/javascript" src="../match_score_helpers/scripts/scorecard.js"></script>
+<script type="text/javascript" src="../match_score_helpers/scripts/scoreboard.js"></script>
+<script type="text/javascript" src="../match_score_helpers/scripts/table_sorter.js"></script>
 <script type="text/javascript" src="scripts/data.js"></script>
-<script type="text/javascript" src="scripts/util.js"></script>
-<script type="text/javascript" src="scripts/score-converter.js"></script>
-<script type="text/javascript" src="scripts/score-calculator.js"></script>
-<script type="text/javascript" src="scripts/scorecard.js"></script>
-<script type="text/javascript" src="scripts/gather.js"></script>
-<script type="text/javascript" src="scripts/scoreboard.js"></script>
-<script type="text/javascript" src="scripts/tablesorter.js"></script>
 <script type="text/javascript" src="scripts/main.js"></script>
 <script type="text/javascript" scr="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 

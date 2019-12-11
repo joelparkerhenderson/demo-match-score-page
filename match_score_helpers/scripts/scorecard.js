@@ -1,16 +1,16 @@
 ////
 //
-// Scorecard: a scorecard binds a maker and taker, 
+// Scorecard: a scorecard binds a partner A and partner B, 
 // and calculates a sum score and per tag score.
 //
 ////
 
 class Scorecard {
-    constructor(id, maker, taker, tags) {
+    constructor(id, partnerA, partnerB, tags) {
         this.id = id;
-        this.partners = [maker, taker];
-        this.maker = maker;
-        this.taker = taker;
+        this.partners = [partnerA, partnerB];
+        this.partnerA = partnerA;
+        this.partnerB = partnerB;
         this.score = 0;
         this.tags = tags;
         this.tagToScore = {};
@@ -23,9 +23,9 @@ class Scorecard {
 
     // TODO optimize by changing from storing values as HTML inputs, to storing values closer.
     calcTagToScore(tag) {
-        var m = elementById(GatherComponent.idByPartnerField(this.maker, tag)).value
-        var t = elementById(GatherComponent.idByPartnerField(this.taker, tag)).value
-        var score = ScoreCalculator.byString(m, t);
+        let a = GatherComponent.idByPartnerField(this.partnerA, tag);
+        let b = GatherComponent.idByPartnerField(this.partnerB, tag);
+        let score = ScoreCalculator.byInputTextElementId(a, b);
         this.tagToScore[tag.id] = score;
         return score;
     }
