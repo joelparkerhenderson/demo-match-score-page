@@ -7,7 +7,7 @@
 const FIELDS_ID = "fields";
 const FREEFORMS_ID = "freeforms";
 const TAGS_ID = "tags";
-const PARTICPANTS_ID = "partners";
+const PARTNERS_ID = "partners";
 const MAKERS_ID = "makers";
 const TAKERS_ID = "takers";
 const SCOREBOARD_ID = "scoreboard";
@@ -31,39 +31,6 @@ const FIELD_TYPE_TO_FORM_INPUT_SIZE = {
 var gatherMakers;
 var gatherTakers;
 var scoreboard;
-
-////
-//
-// Score sort
-//
-////
-
-// Sort by score descending.
-function scoreSortAsc(sortables) {
-    return sortables.sort((a, b) => a.score - b.score);
-}
-
-// Sort by score descending.
-function scoreSortDesc(sortables) {
-    return sortables.sort((a, b) => b.score - a.score);
-}
-
-////
-//
-// Score view
-//
-////
-
-// Convert a score mark (such as "y") to a score number (such as 1.0).
-function stringToScore(s, lookup) {
-    if (s == null || s == "") return 0;
-    return lookup[s.trim().toLowerCase()] || parseFloat(s) || 0;
-}
-
-// Convert a score to a CSS style word, suitable for CSS styling.
-function scoreToStyleWord(score) {
-    return (score > 0) ? "positive" : (score < 0) ? "negative" : "zero";
-}
 
 ////
 //
