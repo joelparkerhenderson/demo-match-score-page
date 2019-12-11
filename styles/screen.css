@@ -1,0 +1,60 @@
+body {
+    font-family: sans-serif;
+    font-size:12px;
+    font-weight:400;
+}
+
+input[type="text"] {
+    font-size:12px;
+    font-weight:400;
+}
+
+th {
+    text-align: left;
+    font-size:16px;
+    font-weight:400;
+}
+
+th input[type="text"] {
+    font-size:16px;
+    font-weight:400;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+}
+
+td {
+    font-size:12px;
+    font-weight:400;
+}
+
+/**
+ *
+ * color & background-color: -is-positive | -is-negative | -is-zero
+ *
+ **/
+
+.color-is-postive {
+    color: green;
+}
+
+.color-is-negative {
+    color: red;
+}
+
+.color-is-zero {
+    color: yellow;
+}
+
+.background-color-is-postive {
+    background-color: green;
+}
+
+.background-color-is-negative {
+    background-color: red;
+}
+
+.background-color-is-zero {
+    background-color: yellow;
+}
