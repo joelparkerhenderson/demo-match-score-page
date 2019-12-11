@@ -14,6 +14,10 @@ class ScoreboardComponent {
         this.tags = tags;
     }
 
+    static idByScoreboard(scoreboard) {
+        return "scoreboards[" + scoreboard.id + "]";
+    }
+
     static idByScoreboardScore(scoreboard) {
         return "scoreboards[" + scoreboard.id + "].score`";
     }
@@ -43,7 +47,8 @@ class ScoreboardComponent {
     }
 
     create_table() {
-        return element("TABLE").appendChildren([this.create_thead(), this.create_tbody()]);
+        let id = this.constructor.idByScoreboard(this);
+        return element("TABLE").setId(id).appendChildren([this.create_thead(), this.create_tbody()]);
     }
 
     create_thead() {

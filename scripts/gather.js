@@ -14,6 +14,10 @@ class GatherComponent {
         this.partners = partners;
     }
 
+    static idByGatherTeam(gather, team) {
+        return "gathers[" + gather.id + "].teams[" + team.id + "]"; 
+    }
+
     static idByGatherTeamField(gather, team, field) {
         return "gathers[" + gather.id + "].teams[" + team.id + "].fields[" + field.id + "]"; 
     }
@@ -27,7 +31,8 @@ class GatherComponent {
     }
     
     create_table() {
-        return element("TABLE").appendChildren([this.create_thead(), this.create_tbody()]);
+        let id = this.constructor.idByGatherTeam(this, this.team);
+        return element("TABLE").setId(id).appendChildren([this.create_thead(), this.create_tbody()]);
     }
 
     create_thead() {
