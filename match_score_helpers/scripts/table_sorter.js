@@ -11,7 +11,6 @@
  */
 var TableSorter = {
     makeSortable: function(table){
-        console.log("TableSorter makeSortable");
         // Store context of this in the object
         var _this = this;
         var th = table.tHead, i;
