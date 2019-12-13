@@ -8,16 +8,14 @@
 
 <body>
 
-<h1>Match Score: with two groups</h1>
+<h1>Match Score: with one group</h1>
 <!--
-<button onclick="elementById('makers').toggle(); return false;">Group 1</button>
-<button onclick="elementById('takers').toggle(); return false;">Group 2</button>
+<button onclick="elementById('partners').toggle(); return false;">Partners</button>
 <button onclick="elementById('scoreboard').toggle(); return false;">Grid</button>
 -->
 
 <form>
-    <p><div id="makers" class="page__area" style="display:block;"></div></p>
-    <p><div id="takers" class="page__area" style="display:block;"></div></p>
+    <p><div id="partners" class="page__area" style="display:block;"></div></p>
     <p><div id="scoreboard" class="page__area" style="display:block;"></div></p>
 </form>
 
@@ -33,8 +31,7 @@
 
 <script>
 window.addEventListener('load', function () {
-    //TableSorter.makeSortable(elementById("gathers[gatherMakers].teams[makers]"));
-    //TableSorter.makeSortable(elementById("gathers[gatherTakers].teams[takers]"));
+    //TableSorter.makeSortable(elementById("gathers[gatherPartners].teams[partners]"));
     TableSorter.makeSortable(elementById("scoreboards[scoreboard]"));
 });
 </script>

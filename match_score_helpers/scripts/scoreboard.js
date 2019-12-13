@@ -59,11 +59,19 @@ class ScoreboardComponent {
 
     create_thead_tr() {
         var tr = element("TR");
-        this.teams.forEach(team => {
-            this.freeforms.forEach(freeform => {
-                tr.appendChild(this.create_thead_tr_th_team_freeform(team, freeform));
+        if (TEAMS_SIZE == 1) {
+            [this.teams[0], this.teams[0]].forEach(team => {
+                this.freeforms.forEach(freeform => {
+                    tr.appendChild(this.create_thead_tr_th_team_freeform(team, freeform));
+                });
             });
-        });
+        } else {
+            this.teams.forEach(team => {
+                this.freeforms.forEach(freeform => {
+                    tr.appendChild(this.create_thead_tr_th_team_freeform(team, freeform));
+                });
+            });
+        }
         this.tags.forEach(tag => {
             tr.appendChild(this.create_thead_tr_th_tag(tag));
         });

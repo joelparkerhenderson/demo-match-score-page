@@ -57,7 +57,9 @@ class GatherComponent {
 
     create_tbody() {
         var tbody = element("TBODY");
-        this.partners.forEach(partner => tbody.appendChild(this.create_tbody_tr(partner)));
+        this.partners.forEach(partner => {
+            tbody.appendChild(this.create_tbody_tr(partner))
+        });
         return tbody;
     }
 

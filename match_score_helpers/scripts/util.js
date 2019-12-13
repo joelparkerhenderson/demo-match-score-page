@@ -109,11 +109,48 @@ function elementsByClassName(className) {
 // Vet a.k.a. validate
 function vet(x) {
     if (typeof x == "undefined") {
-        console.error("vet: x == undefined.");
+        console.error("vet: x undefined.");
         return false;
     }
     if (x == null) {
         console.error("vet: x == null.");
+        return false;
+    }
+    if (x == NaN) {
+        console.error("vet: x == NaN.");
+        return false;
+    }    
+    return true;
+}
+
+// Vet attribute a.k.a. validate an object has a field.
+function vetAt(x, y) {
+    if (typeof x == "undefined") {
+        console.error("vetAt: x undefined.");
+        return false;
+    }
+    if (x == null) {
+        console.error("vetAt: x == null.");
+        return false;
+    }
+    if (typeof y == "undefined") {
+        console.error("vetAt: y undefined.");
+        return false;
+    }
+    if (y == null) {
+        console.error("vetAt: y == null.");
+        return false;
+    }
+    if (y == NaN) {
+        console.error("vetAt: y == NaN.");
+        return false;
+    }    
+    if (typeof x[y] == "undefined") {
+        console.error("vetAt: x[" + y + "] undefined.");
+        return false;
+    }
+    if (x[y] == null) {
+        console.error("vetAt: x[" + y + "] == null.");
         return false;
     }
     return true;
